@@ -1,0 +1,40 @@
+<h2>{{ id ? 'Editar' : 'Novo' }} Contato</h2>
+<form [formGroup]="form" (ngSubmit)="save()">
+  <div>
+    <label>Nome:</label>
+    <input formControlName="nome" />
+    <div *ngIf="form.get('nome')?.invalid && form.get('nome')?.touched">
+      Nome é obrigatório
+    </div>
+  </div>
+
+  <div>
+    <label>Telefone:</label>
+    <input formControlName="telefone" />
+    <div *ngIf="form.get('telefone')?.invalid && form.get('telefone')?.touched">
+      Telefone é obrigatório
+    </div>
+  </div>
+
+  <div>
+    <label>E-mail:</label>
+    <input formControlName="email" />
+    <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+      <div *ngIf="form.get('email')?.errors?.required">E-mail é obrigatório</div>
+      <div *ngIf="form.get('email')?.errors?.email">Formato de e-mail inválido</div>
+    </div>
+  </div>
+
+  <div>
+    <label>Endereço:</label>
+    <input formControlName="endereco" />
+  </div>
+
+  <div>
+    <label>Observações:</label>
+    <textarea formControlName="observacoes"></textarea>
+  </div>
+
+  <button type="submit" [disabled]="form.invalid">Salvar</button>
+  <button type="button" (click)="cancel()">Cancelar</button>
+</form>

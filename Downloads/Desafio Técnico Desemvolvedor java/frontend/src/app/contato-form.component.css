@@ -1,0 +1,21 @@
+form div {
+  margin-bottom: 0.75rem;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input, textarea {
+  width: 200px;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+button {
+  margin-right: 0.5rem;
+}

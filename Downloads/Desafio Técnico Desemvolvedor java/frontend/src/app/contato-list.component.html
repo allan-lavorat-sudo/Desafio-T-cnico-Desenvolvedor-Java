@@ -1,0 +1,24 @@
+<h2>Lista de Contatos</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>E-mail</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of contatos">
+      <td>{{ c.nome }}</td>
+      <td>{{ c.telefone }}</td>
+      <td>{{ c.email }}</td>
+      <td>
+        <button (click)="editar(c.id!)">Editar</button>
+        <button (click)="excluir(c.id!)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<button routerLink="/contatos/novo">Novo Contato</button>
