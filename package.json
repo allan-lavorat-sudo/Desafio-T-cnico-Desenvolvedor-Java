@@ -1,0 +1,21 @@
+{
+  "name": "cypress-serverest-challenge",
+  "version": "1.0.0",
+  "description": "Desafio de Automação com Cypress para o frontend e API do ServeRest.",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "automation",
+    "serverest",
+    "testing"
+  ],
+  "author": "Jules",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.11.0"
+  }
+}
